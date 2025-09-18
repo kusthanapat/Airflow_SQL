@@ -1,0 +1,36 @@
+[2025-09-18T01:29:47.408+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_production_summary_with_oee.create_oee_a2 manual__2025-09-18T01:29:43.936227+00:00 [queued]>
+[2025-09-18T01:29:47.413+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_production_summary_with_oee.create_oee_a2 manual__2025-09-18T01:29:43.936227+00:00 [queued]>
+[2025-09-18T01:29:47.413+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-09-18T01:29:47.420+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): create_oee_a2> on 2025-09-18 01:29:43.936227+00:00
+[2025-09-18T01:29:47.425+0000] {standard_task_runner.py:60} INFO - Started process 172 to run task
+[2025-09-18T01:29:47.427+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'dag_production_summary_with_oee', 'create_oee_a2', 'manual__2025-09-18T01:29:43.936227+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/sql_flow.py', '--cfg-path', '/tmp/tmpvoctv6l9']
+[2025-09-18T01:29:47.429+0000] {standard_task_runner.py:88} INFO - Job 5: Subtask create_oee_a2
+[2025-09-18T01:29:47.463+0000] {task_command.py:423} INFO - Running <TaskInstance: dag_production_summary_with_oee.create_oee_a2 manual__2025-09-18T01:29:43.936227+00:00 [running]> on host 19887248a5dd
+[2025-09-18T01:29:47.504+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_production_summary_with_oee' AIRFLOW_CTX_TASK_ID='create_oee_a2' AIRFLOW_CTX_EXECUTION_DATE='2025-09-18T01:29:43.936227+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-09-18T01:29:43.936227+00:00'
+[2025-09-18T01:29:47.576+0000] {logging_mixin.py:188} INFO - ❌ Error (create_oee_a2): function round(double precision, integer) does not exist
+LINE 9:                 THEN ROUND((("Hours" - "Total_Error_Hours") ...
+                             ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+[2025-09-18T01:29:47.577+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/sql_flow.py", line 242, in create_oee_a2
+    cursor.execute(create_view_query)
+psycopg2.errors.UndefinedFunction: function round(double precision, integer) does not exist
+LINE 9:                 THEN ROUND((("Hours" - "Total_Error_Hours") ...
+                             ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+[2025-09-18T01:29:47.589+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=dag_production_summary_with_oee, task_id=create_oee_a2, execution_date=20250918T012943, start_date=20250918T012947, end_date=20250918T012947
+[2025-09-18T01:29:47.599+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 5 for task create_oee_a2 (function round(double precision, integer) does not exist
+LINE 9:                 THEN ROUND((("Hours" - "Total_Error_Hours") ...
+                             ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+; 172)
+[2025-09-18T01:29:47.640+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-09-18T01:29:47.654+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

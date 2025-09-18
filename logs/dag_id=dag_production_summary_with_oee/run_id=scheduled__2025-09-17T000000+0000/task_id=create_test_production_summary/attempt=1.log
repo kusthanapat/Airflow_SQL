@@ -1,0 +1,72 @@
+[2025-09-18T01:19:20.314+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_production_summary_with_oee.create_test_production_summary scheduled__2025-09-17T00:00:00+00:00 [queued]>
+[2025-09-18T01:19:20.318+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_production_summary_with_oee.create_test_production_summary scheduled__2025-09-17T00:00:00+00:00 [queued]>
+[2025-09-18T01:19:20.320+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-09-18T01:19:20.328+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): create_test_production_summary> on 2025-09-17 00:00:00+00:00
+[2025-09-18T01:19:20.333+0000] {standard_task_runner.py:60} INFO - Started process 79 to run task
+[2025-09-18T01:19:20.336+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'dag_production_summary_with_oee', 'create_test_production_summary', 'scheduled__2025-09-17T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/sql_flow.py', '--cfg-path', '/tmp/tmp9b1g56fy']
+[2025-09-18T01:19:20.338+0000] {standard_task_runner.py:88} INFO - Job 3: Subtask create_test_production_summary
+[2025-09-18T01:19:20.378+0000] {task_command.py:423} INFO - Running <TaskInstance: dag_production_summary_with_oee.create_test_production_summary scheduled__2025-09-17T00:00:00+00:00 [running]> on host d11e6b327003
+[2025-09-18T01:19:20.425+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_production_summary_with_oee' AIRFLOW_CTX_TASK_ID='create_test_production_summary' AIRFLOW_CTX_EXECUTION_DATE='2025-09-17T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-17T00:00:00+00:00'
+[2025-09-18T01:19:20.502+0000] {logging_mixin.py:188} INFO - ✅ View Test_Production_summary ถูกสร้างแล้ว
+[2025-09-18T01:19:20.502+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-09-18T01:19:20.508+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=dag_production_summary_with_oee, task_id=create_test_production_summary, execution_date=20250917T000000, start_date=20250918T011920, end_date=20250918T011920
+[2025-09-18T01:19:20.548+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-09-18T01:19:20.560+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-09-18T01:29:46.295+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_production_summary_with_oee.create_test_production_summary scheduled__2025-09-17T00:00:00+00:00 [queued]>
+[2025-09-18T01:29:46.300+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_production_summary_with_oee.create_test_production_summary scheduled__2025-09-17T00:00:00+00:00 [queued]>
+[2025-09-18T01:29:46.301+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-09-18T01:29:46.309+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): create_test_production_summary> on 2025-09-17 00:00:00+00:00
+[2025-09-18T01:29:46.313+0000] {standard_task_runner.py:60} INFO - Started process 168 to run task
+[2025-09-18T01:29:46.316+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'dag_production_summary_with_oee', 'create_test_production_summary', 'scheduled__2025-09-17T00:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/sql_flow.py', '--cfg-path', '/tmp/tmp95n22qzr']
+[2025-09-18T01:29:46.319+0000] {standard_task_runner.py:88} INFO - Job 4: Subtask create_test_production_summary
+[2025-09-18T01:29:46.360+0000] {task_command.py:423} INFO - Running <TaskInstance: dag_production_summary_with_oee.create_test_production_summary scheduled__2025-09-17T00:00:00+00:00 [running]> on host 19887248a5dd
+[2025-09-18T01:29:46.407+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_production_summary_with_oee' AIRFLOW_CTX_TASK_ID='create_test_production_summary' AIRFLOW_CTX_EXECUTION_DATE='2025-09-17T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-17T00:00:00+00:00'
+[2025-09-18T01:29:46.490+0000] {logging_mixin.py:188} INFO - ❌ Error (create_test_production_summary): duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+DETAIL:  Key (typname, typnamespace)=(Test_Production_summary, 2200) already exists.
+[2025-09-18T01:29:46.490+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/sql_flow.py", line 188, in create_test_production_summary
+    cursor.execute(create_view_query)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+DETAIL:  Key (typname, typnamespace)=(Test_Production_summary, 2200) already exists.
+
+[2025-09-18T01:29:46.499+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=dag_production_summary_with_oee, task_id=create_test_production_summary, execution_date=20250917T000000, start_date=20250918T012946, end_date=20250918T012946
+[2025-09-18T01:29:46.507+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 4 for task create_test_production_summary (duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+DETAIL:  Key (typname, typnamespace)=(Test_Production_summary, 2200) already exists.
+; 168)
+[2025-09-18T01:29:46.529+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-09-18T01:29:46.542+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-09-18T01:35:35.006+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_production_summary_with_oee.create_test_production_summary scheduled__2025-09-17T00:00:00+00:00 [queued]>
+[2025-09-18T01:35:35.012+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_production_summary_with_oee.create_test_production_summary scheduled__2025-09-17T00:00:00+00:00 [queued]>
+[2025-09-18T01:35:35.012+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-09-18T01:35:35.021+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): create_test_production_summary> on 2025-09-17 00:00:00+00:00
+[2025-09-18T01:35:35.024+0000] {standard_task_runner.py:60} INFO - Started process 80 to run task
+[2025-09-18T01:35:35.028+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'dag_production_summary_with_oee', 'create_test_production_summary', 'scheduled__2025-09-17T00:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/sql_flow.py', '--cfg-path', '/tmp/tmpfskb8wik']
+[2025-09-18T01:35:35.031+0000] {standard_task_runner.py:88} INFO - Job 4: Subtask create_test_production_summary
+[2025-09-18T01:35:35.072+0000] {task_command.py:423} INFO - Running <TaskInstance: dag_production_summary_with_oee.create_test_production_summary scheduled__2025-09-17T00:00:00+00:00 [running]> on host e601ccdb5885
+[2025-09-18T01:35:35.124+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_production_summary_with_oee' AIRFLOW_CTX_TASK_ID='create_test_production_summary' AIRFLOW_CTX_EXECUTION_DATE='2025-09-17T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-17T00:00:00+00:00'
+[2025-09-18T01:35:35.209+0000] {logging_mixin.py:188} INFO - ✅ View Test_Production_summary ถูกสร้างแล้ว
+[2025-09-18T01:35:35.209+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-09-18T01:35:35.215+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=dag_production_summary_with_oee, task_id=create_test_production_summary, execution_date=20250917T000000, start_date=20250918T013535, end_date=20250918T013535
+[2025-09-18T01:35:35.241+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-09-18T01:35:35.252+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-09-18T01:39:25.115+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_production_summary_with_oee.create_test_production_summary scheduled__2025-09-17T00:00:00+00:00 [queued]>
+[2025-09-18T01:39:25.119+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_production_summary_with_oee.create_test_production_summary scheduled__2025-09-17T00:00:00+00:00 [queued]>
+[2025-09-18T01:39:25.120+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-09-18T01:39:25.128+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): create_test_production_summary> on 2025-09-17 00:00:00+00:00
+[2025-09-18T01:39:25.131+0000] {standard_task_runner.py:60} INFO - Started process 80 to run task
+[2025-09-18T01:39:25.134+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'dag_production_summary_with_oee', 'create_test_production_summary', 'scheduled__2025-09-17T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/sql_flow.py', '--cfg-path', '/tmp/tmpnxgac7rq']
+[2025-09-18T01:39:25.136+0000] {standard_task_runner.py:88} INFO - Job 3: Subtask create_test_production_summary
+[2025-09-18T01:39:25.176+0000] {task_command.py:423} INFO - Running <TaskInstance: dag_production_summary_with_oee.create_test_production_summary scheduled__2025-09-17T00:00:00+00:00 [running]> on host 73605eba340c
+[2025-09-18T01:39:25.222+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_production_summary_with_oee' AIRFLOW_CTX_TASK_ID='create_test_production_summary' AIRFLOW_CTX_EXECUTION_DATE='2025-09-17T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-17T00:00:00+00:00'
+[2025-09-18T01:39:25.296+0000] {logging_mixin.py:188} INFO - ✅ View Test_Production_summary ถูกสร้างแล้ว
+[2025-09-18T01:39:25.297+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-09-18T01:39:25.303+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=dag_production_summary_with_oee, task_id=create_test_production_summary, execution_date=20250917T000000, start_date=20250918T013925, end_date=20250918T013925
+[2025-09-18T01:39:25.346+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-09-18T01:39:25.358+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check
