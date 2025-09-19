@@ -1,0 +1,157 @@
+[2025-09-19T03:19:32.341+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_production_views_daily.create_summary_availability scheduled__2025-09-18T00:00:00+00:00 [queued]>
+[2025-09-19T03:19:32.347+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_production_views_daily.create_summary_availability scheduled__2025-09-18T00:00:00+00:00 [queued]>
+[2025-09-19T03:19:32.347+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-09-19T03:19:32.356+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): create_summary_availability> on 2025-09-18 00:00:00+00:00
+[2025-09-19T03:19:32.360+0000] {standard_task_runner.py:60} INFO - Started process 92 to run task
+[2025-09-19T03:19:32.363+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'dag_production_views_daily', 'create_summary_availability', 'scheduled__2025-09-18T00:00:00+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/sql_flow.py', '--cfg-path', '/tmp/tmpxewatt7l']
+[2025-09-19T03:19:32.365+0000] {standard_task_runner.py:88} INFO - Job 8: Subtask create_summary_availability
+[2025-09-19T03:19:32.406+0000] {task_command.py:423} INFO - Running <TaskInstance: dag_production_views_daily.create_summary_availability scheduled__2025-09-18T00:00:00+00:00 [running]> on host 9d2eaef777cb
+[2025-09-19T03:19:32.448+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_production_views_daily' AIRFLOW_CTX_TASK_ID='create_summary_availability' AIRFLOW_CTX_EXECUTION_DATE='2025-09-18T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-18T00:00:00+00:00'
+[2025-09-19T03:19:32.496+0000] {logging_mixin.py:188} INFO - ❌ Error (create_summary_availability): column d.Group_Work_Center does not exist
+LINE 15:             ON h."Group_Work_Center" = d."Group_Work_Center"
+                                                ^
+HINT:  Perhaps you meant to reference the column "h.Group_Work_Center" or the column "d.GroupWork_Center".
+[2025-09-19T03:19:32.497+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/sql_flow.py", line 272, in create_summary_availability
+    cursor.execute(create_view_query)
+psycopg2.errors.UndefinedColumn: column d.Group_Work_Center does not exist
+LINE 15:             ON h."Group_Work_Center" = d."Group_Work_Center"
+                                                ^
+HINT:  Perhaps you meant to reference the column "h.Group_Work_Center" or the column "d.GroupWork_Center".
+
+[2025-09-19T03:19:32.506+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=dag_production_views_daily, task_id=create_summary_availability, execution_date=20250918T000000, start_date=20250919T031932, end_date=20250919T031932
+[2025-09-19T03:19:32.515+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 8 for task create_summary_availability (column d.Group_Work_Center does not exist
+LINE 15:             ON h."Group_Work_Center" = d."Group_Work_Center"
+                                                ^
+HINT:  Perhaps you meant to reference the column "h.Group_Work_Center" or the column "d.GroupWork_Center".
+; 92)
+[2025-09-19T03:19:32.535+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-09-19T03:19:32.546+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-09-19T03:25:26.988+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_production_views_daily.create_summary_availability scheduled__2025-09-18T00:00:00+00:00 [queued]>
+[2025-09-19T03:25:26.993+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_production_views_daily.create_summary_availability scheduled__2025-09-18T00:00:00+00:00 [queued]>
+[2025-09-19T03:25:26.993+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-09-19T03:25:27.001+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): create_summary_availability> on 2025-09-18 00:00:00+00:00
+[2025-09-19T03:25:27.004+0000] {standard_task_runner.py:60} INFO - Started process 92 to run task
+[2025-09-19T03:25:27.007+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'dag_production_views_daily', 'create_summary_availability', 'scheduled__2025-09-18T00:00:00+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/sql_flow.py', '--cfg-path', '/tmp/tmpfho004rs']
+[2025-09-19T03:25:27.010+0000] {standard_task_runner.py:88} INFO - Job 8: Subtask create_summary_availability
+[2025-09-19T03:25:27.052+0000] {task_command.py:423} INFO - Running <TaskInstance: dag_production_views_daily.create_summary_availability scheduled__2025-09-18T00:00:00+00:00 [running]> on host 5649ef978325
+[2025-09-19T03:25:27.095+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_production_views_daily' AIRFLOW_CTX_TASK_ID='create_summary_availability' AIRFLOW_CTX_EXECUTION_DATE='2025-09-18T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-18T00:00:00+00:00'
+[2025-09-19T03:25:27.153+0000] {logging_mixin.py:188} INFO - ❌ Error (create_summary_availability): column d.downtime_hours does not exist
+LINE 7:             ROUND((h.hours_for_day - COALESCE(d.downtime_hou...
+                                                      ^
+[2025-09-19T03:25:27.153+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/sql_flow.py", line 272, in create_summary_availability
+    cursor.execute(create_view_query)
+psycopg2.errors.UndefinedColumn: column d.downtime_hours does not exist
+LINE 7:             ROUND((h.hours_for_day - COALESCE(d.downtime_hou...
+                                                      ^
+
+[2025-09-19T03:25:27.165+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=dag_production_views_daily, task_id=create_summary_availability, execution_date=20250918T000000, start_date=20250919T032526, end_date=20250919T032527
+[2025-09-19T03:25:27.181+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 8 for task create_summary_availability (column d.downtime_hours does not exist
+LINE 7:             ROUND((h.hours_for_day - COALESCE(d.downtime_hou...
+                                                      ^
+; 92)
+[2025-09-19T03:25:27.220+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-09-19T03:25:27.232+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-09-19T03:29:46.377+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_production_views_daily.create_summary_availability scheduled__2025-09-18T00:00:00+00:00 [queued]>
+[2025-09-19T03:29:46.384+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_production_views_daily.create_summary_availability scheduled__2025-09-18T00:00:00+00:00 [queued]>
+[2025-09-19T03:29:46.385+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-09-19T03:29:46.392+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): create_summary_availability> on 2025-09-18 00:00:00+00:00
+[2025-09-19T03:29:46.398+0000] {standard_task_runner.py:60} INFO - Started process 92 to run task
+[2025-09-19T03:29:46.401+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'dag_production_views_daily', 'create_summary_availability', 'scheduled__2025-09-18T00:00:00+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/sql_flow.py', '--cfg-path', '/tmp/tmp0cfvwjmi']
+[2025-09-19T03:29:46.404+0000] {standard_task_runner.py:88} INFO - Job 8: Subtask create_summary_availability
+[2025-09-19T03:29:46.448+0000] {task_command.py:423} INFO - Running <TaskInstance: dag_production_views_daily.create_summary_availability scheduled__2025-09-18T00:00:00+00:00 [running]> on host bfad0f2ff0e1
+[2025-09-19T03:29:46.496+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_production_views_daily' AIRFLOW_CTX_TASK_ID='create_summary_availability' AIRFLOW_CTX_EXECUTION_DATE='2025-09-18T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-18T00:00:00+00:00'
+[2025-09-19T03:29:46.560+0000] {logging_mixin.py:188} INFO - ❌ Error (create_summary_availability): duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+DETAIL:  Key (typname, typnamespace)=(summary_availability, 2200) already exists.
+[2025-09-19T03:29:46.560+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/sql_flow.py", line 272, in create_summary_availability
+    cursor.execute(create_view_query)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+DETAIL:  Key (typname, typnamespace)=(summary_availability, 2200) already exists.
+
+[2025-09-19T03:29:46.570+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=dag_production_views_daily, task_id=create_summary_availability, execution_date=20250918T000000, start_date=20250919T032946, end_date=20250919T032946
+[2025-09-19T03:29:46.578+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 8 for task create_summary_availability (duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+DETAIL:  Key (typname, typnamespace)=(summary_availability, 2200) already exists.
+; 92)
+[2025-09-19T03:29:46.613+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-09-19T03:29:46.624+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-09-19T07:46:30.822+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_production_views_daily.create_summary_availability scheduled__2025-09-18T00:00:00+00:00 [queued]>
+[2025-09-19T07:46:30.827+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_production_views_daily.create_summary_availability scheduled__2025-09-18T00:00:00+00:00 [queued]>
+[2025-09-19T07:46:30.827+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-09-19T07:46:30.835+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): create_summary_availability> on 2025-09-18 00:00:00+00:00
+[2025-09-19T07:46:30.842+0000] {standard_task_runner.py:60} INFO - Started process 91 to run task
+[2025-09-19T07:46:30.845+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'dag_production_views_daily', 'create_summary_availability', 'scheduled__2025-09-18T00:00:00+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/sql_flow.py', '--cfg-path', '/tmp/tmpcd62iwuz']
+[2025-09-19T07:46:30.848+0000] {standard_task_runner.py:88} INFO - Job 8: Subtask create_summary_availability
+[2025-09-19T07:46:30.892+0000] {task_command.py:423} INFO - Running <TaskInstance: dag_production_views_daily.create_summary_availability scheduled__2025-09-18T00:00:00+00:00 [running]> on host ab351943f79f
+[2025-09-19T07:46:30.941+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_production_views_daily' AIRFLOW_CTX_TASK_ID='create_summary_availability' AIRFLOW_CTX_EXECUTION_DATE='2025-09-18T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-18T00:00:00+00:00'
+[2025-09-19T07:46:31.007+0000] {logging_mixin.py:188} INFO - View summary_availability ถูกสร้างแล้ว
+[2025-09-19T07:46:31.007+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-09-19T07:46:31.013+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=dag_production_views_daily, task_id=create_summary_availability, execution_date=20250918T000000, start_date=20250919T074630, end_date=20250919T074631
+[2025-09-19T07:46:31.058+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-09-19T07:46:31.069+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-09-19T08:12:53.614+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_production_views_daily.create_summary_availability scheduled__2025-09-18T00:00:00+00:00 [queued]>
+[2025-09-19T08:12:53.620+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_production_views_daily.create_summary_availability scheduled__2025-09-18T00:00:00+00:00 [queued]>
+[2025-09-19T08:12:53.620+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-09-19T08:12:53.627+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): create_summary_availability> on 2025-09-18 00:00:00+00:00
+[2025-09-19T08:12:53.631+0000] {standard_task_runner.py:60} INFO - Started process 91 to run task
+[2025-09-19T08:12:53.634+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'dag_production_views_daily', 'create_summary_availability', 'scheduled__2025-09-18T00:00:00+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/sql_flow.py', '--cfg-path', '/tmp/tmp_s408136']
+[2025-09-19T08:12:53.636+0000] {standard_task_runner.py:88} INFO - Job 8: Subtask create_summary_availability
+[2025-09-19T08:12:53.672+0000] {task_command.py:423} INFO - Running <TaskInstance: dag_production_views_daily.create_summary_availability scheduled__2025-09-18T00:00:00+00:00 [running]> on host 561c810bee90
+[2025-09-19T08:12:53.715+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_production_views_daily' AIRFLOW_CTX_TASK_ID='create_summary_availability' AIRFLOW_CTX_EXECUTION_DATE='2025-09-18T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-18T00:00:00+00:00'
+[2025-09-19T08:12:53.787+0000] {logging_mixin.py:188} INFO - View summary_availability ถูกสร้างแล้ว
+[2025-09-19T08:12:53.788+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-09-19T08:12:53.794+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=dag_production_views_daily, task_id=create_summary_availability, execution_date=20250918T000000, start_date=20250919T081253, end_date=20250919T081253
+[2025-09-19T08:12:53.846+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-09-19T08:12:53.860+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-09-19T08:15:22.765+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_production_views_daily.create_summary_availability scheduled__2025-09-18T00:00:00+00:00 [queued]>
+[2025-09-19T08:15:22.770+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_production_views_daily.create_summary_availability scheduled__2025-09-18T00:00:00+00:00 [queued]>
+[2025-09-19T08:15:22.770+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-09-19T08:15:22.777+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): create_summary_availability> on 2025-09-18 00:00:00+00:00
+[2025-09-19T08:15:22.780+0000] {standard_task_runner.py:60} INFO - Started process 91 to run task
+[2025-09-19T08:15:22.783+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'dag_production_views_daily', 'create_summary_availability', 'scheduled__2025-09-18T00:00:00+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/sql_flow.py', '--cfg-path', '/tmp/tmp1aouvum1']
+[2025-09-19T08:15:22.784+0000] {standard_task_runner.py:88} INFO - Job 8: Subtask create_summary_availability
+[2025-09-19T08:15:22.819+0000] {task_command.py:423} INFO - Running <TaskInstance: dag_production_views_daily.create_summary_availability scheduled__2025-09-18T00:00:00+00:00 [running]> on host ac20b3137fa6
+[2025-09-19T08:15:22.861+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_production_views_daily' AIRFLOW_CTX_TASK_ID='create_summary_availability' AIRFLOW_CTX_EXECUTION_DATE='2025-09-18T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-18T00:00:00+00:00'
+[2025-09-19T08:15:22.932+0000] {logging_mixin.py:188} INFO - Error (create_summary_availability): duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+DETAIL:  Key (typname, typnamespace)=(summary_availability_2, 2200) already exists.
+[2025-09-19T08:15:22.932+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/sql_flow.py", line 291, in create_summary_availability
+    cursor.execute(create_view_query)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+DETAIL:  Key (typname, typnamespace)=(summary_availability_2, 2200) already exists.
+
+[2025-09-19T08:15:22.940+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=dag_production_views_daily, task_id=create_summary_availability, execution_date=20250918T000000, start_date=20250919T081522, end_date=20250919T081522
+[2025-09-19T08:15:22.948+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 8 for task create_summary_availability (duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+DETAIL:  Key (typname, typnamespace)=(summary_availability_2, 2200) already exists.
+; 91)
+[2025-09-19T08:15:22.955+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-09-19T08:15:22.965+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

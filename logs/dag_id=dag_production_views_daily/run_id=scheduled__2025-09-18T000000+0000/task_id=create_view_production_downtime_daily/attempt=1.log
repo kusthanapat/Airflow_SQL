@@ -1,0 +1,126 @@
+[2025-09-19T01:04:21.327+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_production_views_daily.create_view_production_downtime_daily scheduled__2025-09-18T00:00:00+00:00 [queued]>
+[2025-09-19T01:04:21.335+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_production_views_daily.create_view_production_downtime_daily scheduled__2025-09-18T00:00:00+00:00 [queued]>
+[2025-09-19T01:04:21.336+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-09-19T01:04:21.344+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): create_view_production_downtime_daily> on 2025-09-18 00:00:00+00:00
+[2025-09-19T01:04:21.349+0000] {standard_task_runner.py:60} INFO - Started process 72 to run task
+[2025-09-19T01:04:21.352+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'dag_production_views_daily', 'create_view_production_downtime_daily', 'scheduled__2025-09-18T00:00:00+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/sql_flow.py', '--cfg-path', '/tmp/tmp6dugja6l']
+[2025-09-19T01:04:21.355+0000] {standard_task_runner.py:88} INFO - Job 12: Subtask create_view_production_downtime_daily
+[2025-09-19T01:04:21.397+0000] {task_command.py:423} INFO - Running <TaskInstance: dag_production_views_daily.create_view_production_downtime_daily scheduled__2025-09-18T00:00:00+00:00 [running]> on host 128d416bdc50
+[2025-09-19T01:04:21.438+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_production_views_daily' AIRFLOW_CTX_TASK_ID='create_view_production_downtime_daily' AIRFLOW_CTX_EXECUTION_DATE='2025-09-18T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-18T00:00:00+00:00'
+[2025-09-19T01:04:21.497+0000] {logging_mixin.py:188} INFO - ✅ View View_Production_DownTime_Daily ถูกสร้างแล้ว
+[2025-09-19T01:04:21.498+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-09-19T01:04:21.506+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=dag_production_views_daily, task_id=create_view_production_downtime_daily, execution_date=20250918T000000, start_date=20250919T010421, end_date=20250919T010421
+[2025-09-19T01:04:21.565+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-09-19T01:04:21.578+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-09-19T03:06:14.246+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_production_views_daily.create_view_production_downtime_daily scheduled__2025-09-18T00:00:00+00:00 [queued]>
+[2025-09-19T03:06:14.250+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_production_views_daily.create_view_production_downtime_daily scheduled__2025-09-18T00:00:00+00:00 [queued]>
+[2025-09-19T03:06:14.251+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-09-19T03:06:14.259+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): create_view_production_downtime_daily> on 2025-09-18 00:00:00+00:00
+[2025-09-19T03:06:14.264+0000] {standard_task_runner.py:60} INFO - Started process 86 to run task
+[2025-09-19T03:06:14.266+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'dag_production_views_daily', 'create_view_production_downtime_daily', 'scheduled__2025-09-18T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/sql_flow.py', '--cfg-path', '/tmp/tmpcoqp6xt1']
+[2025-09-19T03:06:14.268+0000] {standard_task_runner.py:88} INFO - Job 6: Subtask create_view_production_downtime_daily
+[2025-09-19T03:06:14.308+0000] {task_command.py:423} INFO - Running <TaskInstance: dag_production_views_daily.create_view_production_downtime_daily scheduled__2025-09-18T00:00:00+00:00 [running]> on host 4bf3985e0f1c
+[2025-09-19T03:06:14.362+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_production_views_daily' AIRFLOW_CTX_TASK_ID='create_view_production_downtime_daily' AIRFLOW_CTX_EXECUTION_DATE='2025-09-18T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-18T00:00:00+00:00'
+[2025-09-19T03:06:14.429+0000] {logging_mixin.py:188} INFO - ✅ View View_Production_DownTime_Daily ถูกสร้างแล้ว
+[2025-09-19T03:06:14.430+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-09-19T03:06:14.435+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=dag_production_views_daily, task_id=create_view_production_downtime_daily, execution_date=20250918T000000, start_date=20250919T030614, end_date=20250919T030614
+[2025-09-19T03:06:14.479+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-09-19T03:06:14.492+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-09-19T03:17:17.726+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_production_views_daily.create_view_production_downtime_daily scheduled__2025-09-18T00:00:00+00:00 [queued]>
+[2025-09-19T03:17:17.730+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_production_views_daily.create_view_production_downtime_daily scheduled__2025-09-18T00:00:00+00:00 [queued]>
+[2025-09-19T03:17:17.731+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-09-19T03:17:17.742+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): create_view_production_downtime_daily> on 2025-09-18 00:00:00+00:00
+[2025-09-19T03:17:17.745+0000] {standard_task_runner.py:60} INFO - Started process 206 to run task
+[2025-09-19T03:17:17.748+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'dag_production_views_daily', 'create_view_production_downtime_daily', 'scheduled__2025-09-18T00:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/sql_flow.py', '--cfg-path', '/tmp/tmp58zcqaph']
+[2025-09-19T03:17:17.751+0000] {standard_task_runner.py:88} INFO - Job 5: Subtask create_view_production_downtime_daily
+[2025-09-19T03:17:17.796+0000] {task_command.py:423} INFO - Running <TaskInstance: dag_production_views_daily.create_view_production_downtime_daily scheduled__2025-09-18T00:00:00+00:00 [running]> on host db38fcf39f94
+[2025-09-19T03:17:17.844+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_production_views_daily' AIRFLOW_CTX_TASK_ID='create_view_production_downtime_daily' AIRFLOW_CTX_EXECUTION_DATE='2025-09-18T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-18T00:00:00+00:00'
+[2025-09-19T03:17:17.908+0000] {logging_mixin.py:188} INFO - ✅ View View_Production_DownTime_Daily ถูกสร้างแล้ว
+[2025-09-19T03:17:17.908+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-09-19T03:17:17.914+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=dag_production_views_daily, task_id=create_view_production_downtime_daily, execution_date=20250918T000000, start_date=20250919T031717, end_date=20250919T031717
+[2025-09-19T03:17:17.961+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-09-19T03:17:17.975+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-09-19T03:19:31.203+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_production_views_daily.create_view_production_downtime_daily scheduled__2025-09-18T00:00:00+00:00 [queued]>
+[2025-09-19T03:19:31.208+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_production_views_daily.create_view_production_downtime_daily scheduled__2025-09-18T00:00:00+00:00 [queued]>
+[2025-09-19T03:19:31.208+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-09-19T03:19:31.217+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): create_view_production_downtime_daily> on 2025-09-18 00:00:00+00:00
+[2025-09-19T03:19:31.222+0000] {standard_task_runner.py:60} INFO - Started process 86 to run task
+[2025-09-19T03:19:31.225+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'dag_production_views_daily', 'create_view_production_downtime_daily', 'scheduled__2025-09-18T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/sql_flow.py', '--cfg-path', '/tmp/tmpbqupd9nu']
+[2025-09-19T03:19:31.228+0000] {standard_task_runner.py:88} INFO - Job 6: Subtask create_view_production_downtime_daily
+[2025-09-19T03:19:31.271+0000] {task_command.py:423} INFO - Running <TaskInstance: dag_production_views_daily.create_view_production_downtime_daily scheduled__2025-09-18T00:00:00+00:00 [running]> on host 9d2eaef777cb
+[2025-09-19T03:19:31.320+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_production_views_daily' AIRFLOW_CTX_TASK_ID='create_view_production_downtime_daily' AIRFLOW_CTX_EXECUTION_DATE='2025-09-18T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-18T00:00:00+00:00'
+[2025-09-19T03:19:31.392+0000] {logging_mixin.py:188} INFO - ✅ View View_Production_DownTime_Daily ถูกสร้างแล้ว
+[2025-09-19T03:19:31.392+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-09-19T03:19:31.400+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=dag_production_views_daily, task_id=create_view_production_downtime_daily, execution_date=20250918T000000, start_date=20250919T031931, end_date=20250919T031931
+[2025-09-19T03:19:31.438+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-09-19T03:19:31.449+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-09-19T03:25:25.843+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_production_views_daily.create_view_production_downtime_daily scheduled__2025-09-18T00:00:00+00:00 [queued]>
+[2025-09-19T03:25:25.849+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_production_views_daily.create_view_production_downtime_daily scheduled__2025-09-18T00:00:00+00:00 [queued]>
+[2025-09-19T03:25:25.850+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-09-19T03:25:25.857+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): create_view_production_downtime_daily> on 2025-09-18 00:00:00+00:00
+[2025-09-19T03:25:25.861+0000] {standard_task_runner.py:60} INFO - Started process 86 to run task
+[2025-09-19T03:25:25.865+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'dag_production_views_daily', 'create_view_production_downtime_daily', 'scheduled__2025-09-18T00:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/sql_flow.py', '--cfg-path', '/tmp/tmp9r1_4r3c']
+[2025-09-19T03:25:25.868+0000] {standard_task_runner.py:88} INFO - Job 5: Subtask create_view_production_downtime_daily
+[2025-09-19T03:25:25.909+0000] {task_command.py:423} INFO - Running <TaskInstance: dag_production_views_daily.create_view_production_downtime_daily scheduled__2025-09-18T00:00:00+00:00 [running]> on host 5649ef978325
+[2025-09-19T03:25:25.954+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_production_views_daily' AIRFLOW_CTX_TASK_ID='create_view_production_downtime_daily' AIRFLOW_CTX_EXECUTION_DATE='2025-09-18T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-18T00:00:00+00:00'
+[2025-09-19T03:25:26.045+0000] {logging_mixin.py:188} INFO - ✅ View View_Production_DownTime_Daily ถูกสร้างแล้ว
+[2025-09-19T03:25:26.046+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-09-19T03:25:26.053+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=dag_production_views_daily, task_id=create_view_production_downtime_daily, execution_date=20250918T000000, start_date=20250919T032525, end_date=20250919T032526
+[2025-09-19T03:25:26.076+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-09-19T03:25:26.090+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-09-19T03:29:44.720+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_production_views_daily.create_view_production_downtime_daily scheduled__2025-09-18T00:00:00+00:00 [queued]>
+[2025-09-19T03:29:44.725+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_production_views_daily.create_view_production_downtime_daily scheduled__2025-09-18T00:00:00+00:00 [queued]>
+[2025-09-19T03:29:44.725+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-09-19T03:29:44.736+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): create_view_production_downtime_daily> on 2025-09-18 00:00:00+00:00
+[2025-09-19T03:29:44.740+0000] {standard_task_runner.py:60} INFO - Started process 86 to run task
+[2025-09-19T03:29:44.743+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'dag_production_views_daily', 'create_view_production_downtime_daily', 'scheduled__2025-09-18T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/sql_flow.py', '--cfg-path', '/tmp/tmpk5xfnx78']
+[2025-09-19T03:29:44.746+0000] {standard_task_runner.py:88} INFO - Job 6: Subtask create_view_production_downtime_daily
+[2025-09-19T03:29:44.791+0000] {task_command.py:423} INFO - Running <TaskInstance: dag_production_views_daily.create_view_production_downtime_daily scheduled__2025-09-18T00:00:00+00:00 [running]> on host bfad0f2ff0e1
+[2025-09-19T03:29:44.839+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_production_views_daily' AIRFLOW_CTX_TASK_ID='create_view_production_downtime_daily' AIRFLOW_CTX_EXECUTION_DATE='2025-09-18T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-18T00:00:00+00:00'
+[2025-09-19T03:29:44.935+0000] {logging_mixin.py:188} INFO - ✅ View View_Production_DownTime_Daily ถูกสร้างแล้ว
+[2025-09-19T03:29:44.935+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-09-19T03:29:44.941+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=dag_production_views_daily, task_id=create_view_production_downtime_daily, execution_date=20250918T000000, start_date=20250919T032944, end_date=20250919T032944
+[2025-09-19T03:29:44.956+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-09-19T03:29:44.969+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-09-19T07:46:29.694+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_production_views_daily.create_view_production_downtime_daily scheduled__2025-09-18T00:00:00+00:00 [queued]>
+[2025-09-19T07:46:29.699+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_production_views_daily.create_view_production_downtime_daily scheduled__2025-09-18T00:00:00+00:00 [queued]>
+[2025-09-19T07:46:29.700+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-09-19T07:46:29.708+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): create_view_production_downtime_daily> on 2025-09-18 00:00:00+00:00
+[2025-09-19T07:46:29.712+0000] {standard_task_runner.py:60} INFO - Started process 84 to run task
+[2025-09-19T07:46:29.714+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'dag_production_views_daily', 'create_view_production_downtime_daily', 'scheduled__2025-09-18T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/sql_flow.py', '--cfg-path', '/tmp/tmptwvjt1tv']
+[2025-09-19T07:46:29.717+0000] {standard_task_runner.py:88} INFO - Job 6: Subtask create_view_production_downtime_daily
+[2025-09-19T07:46:29.754+0000] {task_command.py:423} INFO - Running <TaskInstance: dag_production_views_daily.create_view_production_downtime_daily scheduled__2025-09-18T00:00:00+00:00 [running]> on host ab351943f79f
+[2025-09-19T07:46:29.797+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_production_views_daily' AIRFLOW_CTX_TASK_ID='create_view_production_downtime_daily' AIRFLOW_CTX_EXECUTION_DATE='2025-09-18T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-18T00:00:00+00:00'
+[2025-09-19T07:46:29.871+0000] {logging_mixin.py:188} INFO - ✅ View View_Production_DownTime_Daily ถูกสร้างแล้ว
+[2025-09-19T07:46:29.871+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-09-19T07:46:29.877+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=dag_production_views_daily, task_id=create_view_production_downtime_daily, execution_date=20250918T000000, start_date=20250919T074629, end_date=20250919T074629
+[2025-09-19T07:46:29.927+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-09-19T07:46:29.940+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-09-19T08:12:52.467+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_production_views_daily.create_view_production_downtime_daily scheduled__2025-09-18T00:00:00+00:00 [queued]>
+[2025-09-19T08:12:52.473+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_production_views_daily.create_view_production_downtime_daily scheduled__2025-09-18T00:00:00+00:00 [queued]>
+[2025-09-19T08:12:52.474+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-09-19T08:12:52.483+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): create_view_production_downtime_daily> on 2025-09-18 00:00:00+00:00
+[2025-09-19T08:12:52.488+0000] {standard_task_runner.py:60} INFO - Started process 85 to run task
+[2025-09-19T08:12:52.491+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'dag_production_views_daily', 'create_view_production_downtime_daily', 'scheduled__2025-09-18T00:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/sql_flow.py', '--cfg-path', '/tmp/tmpp2zkpde2']
+[2025-09-19T08:12:52.493+0000] {standard_task_runner.py:88} INFO - Job 5: Subtask create_view_production_downtime_daily
+[2025-09-19T08:12:52.536+0000] {task_command.py:423} INFO - Running <TaskInstance: dag_production_views_daily.create_view_production_downtime_daily scheduled__2025-09-18T00:00:00+00:00 [running]> on host 561c810bee90
+[2025-09-19T08:12:52.585+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_production_views_daily' AIRFLOW_CTX_TASK_ID='create_view_production_downtime_daily' AIRFLOW_CTX_EXECUTION_DATE='2025-09-18T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-18T00:00:00+00:00'
+[2025-09-19T08:12:52.674+0000] {logging_mixin.py:188} INFO - ✅ View View_Production_DownTime_Daily ถูกสร้างแล้ว
+[2025-09-19T08:12:52.675+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-09-19T08:12:52.684+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=dag_production_views_daily, task_id=create_view_production_downtime_daily, execution_date=20250918T000000, start_date=20250919T081252, end_date=20250919T081252
+[2025-09-19T08:12:52.703+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-09-19T08:12:52.718+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-09-19T08:15:21.621+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_production_views_daily.create_view_production_downtime_daily scheduled__2025-09-18T00:00:00+00:00 [queued]>
+[2025-09-19T08:15:21.627+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_production_views_daily.create_view_production_downtime_daily scheduled__2025-09-18T00:00:00+00:00 [queued]>
+[2025-09-19T08:15:21.628+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-09-19T08:15:21.635+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): create_view_production_downtime_daily> on 2025-09-18 00:00:00+00:00
+[2025-09-19T08:15:21.640+0000] {standard_task_runner.py:60} INFO - Started process 84 to run task
+[2025-09-19T08:15:21.644+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'dag_production_views_daily', 'create_view_production_downtime_daily', 'scheduled__2025-09-18T00:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/sql_flow.py', '--cfg-path', '/tmp/tmp0ceghp4l']
+[2025-09-19T08:15:21.647+0000] {standard_task_runner.py:88} INFO - Job 5: Subtask create_view_production_downtime_daily
+[2025-09-19T08:15:21.688+0000] {task_command.py:423} INFO - Running <TaskInstance: dag_production_views_daily.create_view_production_downtime_daily scheduled__2025-09-18T00:00:00+00:00 [running]> on host ac20b3137fa6
+[2025-09-19T08:15:21.733+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_production_views_daily' AIRFLOW_CTX_TASK_ID='create_view_production_downtime_daily' AIRFLOW_CTX_EXECUTION_DATE='2025-09-18T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-18T00:00:00+00:00'
+[2025-09-19T08:15:21.807+0000] {logging_mixin.py:188} INFO - ✅ View View_Production_DownTime_Daily ถูกสร้างแล้ว
+[2025-09-19T08:15:21.807+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-09-19T08:15:21.814+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=dag_production_views_daily, task_id=create_view_production_downtime_daily, execution_date=20250918T000000, start_date=20250919T081521, end_date=20250919T081521
+[2025-09-19T08:15:21.857+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-09-19T08:15:21.871+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check
