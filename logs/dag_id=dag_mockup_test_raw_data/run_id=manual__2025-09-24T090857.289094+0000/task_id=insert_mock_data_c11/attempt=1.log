@@ -1,0 +1,13 @@
+[2025-09-24T09:09:02.349+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_mockup_test_raw_data.insert_mock_data_c11 manual__2025-09-24T09:08:57.289094+00:00 [queued]>
+[2025-09-24T09:09:02.368+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_mockup_test_raw_data.insert_mock_data_c11 manual__2025-09-24T09:08:57.289094+00:00 [queued]>
+[2025-09-24T09:09:02.371+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-09-24T09:09:02.403+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): insert_mock_data_c11> on 2025-09-24 09:08:57.289094+00:00
+[2025-09-24T09:09:02.420+0000] {standard_task_runner.py:60} INFO - Started process 1381 to run task
+[2025-09-24T09:09:02.423+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'dag_mockup_test_raw_data', 'insert_mock_data_c11', 'manual__2025-09-24T09:08:57.289094+00:00', '--job-id', '155', '--raw', '--subdir', 'DAGS_FOLDER/moc_data_flow.py', '--cfg-path', '/tmp/tmpf2ltnu7s']
+[2025-09-24T09:09:02.429+0000] {standard_task_runner.py:88} INFO - Job 155: Subtask insert_mock_data_c11
+[2025-09-24T09:09:02.525+0000] {task_command.py:423} INFO - Running <TaskInstance: dag_mockup_test_raw_data.insert_mock_data_c11 manual__2025-09-24T09:08:57.289094+00:00 [running]> on host feaba2204362
+[2025-09-24T09:09:02.672+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_mockup_test_raw_data' AIRFLOW_CTX_TASK_ID='insert_mock_data_c11' AIRFLOW_CTX_EXECUTION_DATE='2025-09-24T09:08:57.289094+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-09-24T09:08:57.289094+00:00'
+[2025-09-24T09:09:02.731+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-09-24T09:09:02.740+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=dag_mockup_test_raw_data, task_id=insert_mock_data_c11, execution_date=20250924T090857, start_date=20250924T090902, end_date=20250924T090902
+[2025-09-24T09:09:02.784+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-09-24T09:09:02.816+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

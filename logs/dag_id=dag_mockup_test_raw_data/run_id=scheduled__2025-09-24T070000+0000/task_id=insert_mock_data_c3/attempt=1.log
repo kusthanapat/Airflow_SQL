@@ -1,0 +1,26 @@
+[2025-09-24T08:00:04.968+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_mockup_test_raw_data.insert_mock_data_c3 scheduled__2025-09-24T07:00:00+00:00 [queued]>
+[2025-09-24T08:00:04.987+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_mockup_test_raw_data.insert_mock_data_c3 scheduled__2025-09-24T07:00:00+00:00 [queued]>
+[2025-09-24T08:00:04.990+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-09-24T08:00:05.028+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): insert_mock_data_c3> on 2025-09-24 07:00:00+00:00
+[2025-09-24T08:00:05.037+0000] {standard_task_runner.py:60} INFO - Started process 1685 to run task
+[2025-09-24T08:00:05.042+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'dag_mockup_test_raw_data', 'insert_mock_data_c3', 'scheduled__2025-09-24T07:00:00+00:00', '--job-id', '276', '--raw', '--subdir', 'DAGS_FOLDER/moc_data_flow.py', '--cfg-path', '/tmp/tmp66d4sua4']
+[2025-09-24T08:00:05.047+0000] {standard_task_runner.py:88} INFO - Job 276: Subtask insert_mock_data_c3
+[2025-09-24T08:00:05.104+0000] {task_command.py:423} INFO - Running <TaskInstance: dag_mockup_test_raw_data.insert_mock_data_c3 scheduled__2025-09-24T07:00:00+00:00 [running]> on host 618c142887f3
+[2025-09-24T08:00:05.191+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_mockup_test_raw_data' AIRFLOW_CTX_TASK_ID='insert_mock_data_c3' AIRFLOW_CTX_EXECUTION_DATE='2025-09-24T07:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-24T07:00:00+00:00'
+[2025-09-24T08:00:05.346+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-09-24T08:00:05.358+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=dag_mockup_test_raw_data, task_id=insert_mock_data_c3, execution_date=20250924T070000, start_date=20250924T080004, end_date=20250924T080005
+[2025-09-24T08:00:05.386+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-09-24T08:00:05.435+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-09-24T08:15:48.753+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_mockup_test_raw_data.insert_mock_data_c3 scheduled__2025-09-24T07:00:00+00:00 [queued]>
+[2025-09-24T08:15:48.763+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_mockup_test_raw_data.insert_mock_data_c3 scheduled__2025-09-24T07:00:00+00:00 [queued]>
+[2025-09-24T08:15:48.764+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-09-24T08:15:48.787+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): insert_mock_data_c3> on 2025-09-24 07:00:00+00:00
+[2025-09-24T08:15:48.810+0000] {standard_task_runner.py:60} INFO - Started process 124 to run task
+[2025-09-24T08:15:48.817+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'dag_mockup_test_raw_data', 'insert_mock_data_c3', 'scheduled__2025-09-24T07:00:00+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/moc_data_flow.py', '--cfg-path', '/tmp/tmpkj5zjjkm']
+[2025-09-24T08:15:48.820+0000] {standard_task_runner.py:88} INFO - Job 13: Subtask insert_mock_data_c3
+[2025-09-24T08:15:48.911+0000] {task_command.py:423} INFO - Running <TaskInstance: dag_mockup_test_raw_data.insert_mock_data_c3 scheduled__2025-09-24T07:00:00+00:00 [running]> on host feaba2204362
+[2025-09-24T08:15:49.046+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_mockup_test_raw_data' AIRFLOW_CTX_TASK_ID='insert_mock_data_c3' AIRFLOW_CTX_EXECUTION_DATE='2025-09-24T07:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-24T07:00:00+00:00'
+[2025-09-24T08:15:49.126+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-09-24T08:15:49.151+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=dag_mockup_test_raw_data, task_id=insert_mock_data_c3, execution_date=20250924T070000, start_date=20250924T081548, end_date=20250924T081549
+[2025-09-24T08:15:49.203+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-09-24T08:15:49.224+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

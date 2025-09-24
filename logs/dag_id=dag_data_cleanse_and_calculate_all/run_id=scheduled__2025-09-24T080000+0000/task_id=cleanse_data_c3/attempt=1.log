@@ -1,0 +1,26 @@
+[2025-09-24T09:09:32.529+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_data_cleanse_and_calculate_all.cleanse_data_c3 scheduled__2025-09-24T08:00:00+00:00 [queued]>
+[2025-09-24T09:09:32.537+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_data_cleanse_and_calculate_all.cleanse_data_c3 scheduled__2025-09-24T08:00:00+00:00 [queued]>
+[2025-09-24T09:09:32.538+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-09-24T09:09:32.554+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): cleanse_data_c3> on 2025-09-24 08:00:00+00:00
+[2025-09-24T09:09:32.561+0000] {standard_task_runner.py:60} INFO - Started process 1614 to run task
+[2025-09-24T09:09:32.564+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'dag_data_cleanse_and_calculate_all', 'cleanse_data_c3', 'scheduled__2025-09-24T08:00:00+00:00', '--job-id', '237', '--raw', '--subdir', 'DAGS_FOLDER/cleansing_data_flow.py', '--cfg-path', '/tmp/tmp99ogudiz']
+[2025-09-24T09:09:32.567+0000] {standard_task_runner.py:88} INFO - Job 237: Subtask cleanse_data_c3
+[2025-09-24T09:09:32.628+0000] {task_command.py:423} INFO - Running <TaskInstance: dag_data_cleanse_and_calculate_all.cleanse_data_c3 scheduled__2025-09-24T08:00:00+00:00 [running]> on host feaba2204362
+[2025-09-24T09:09:32.691+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_data_cleanse_and_calculate_all' AIRFLOW_CTX_TASK_ID='cleanse_data_c3' AIRFLOW_CTX_EXECUTION_DATE='2025-09-24T08:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-24T08:00:00+00:00'
+[2025-09-24T09:09:32.955+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-09-24T09:09:32.963+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=dag_data_cleanse_and_calculate_all, task_id=cleanse_data_c3, execution_date=20250924T080000, start_date=20250924T090932, end_date=20250924T090932
+[2025-09-24T09:09:32.981+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-09-24T09:09:32.998+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-09-24T09:59:28.516+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_data_cleanse_and_calculate_all.cleanse_data_c3 scheduled__2025-09-24T08:00:00+00:00 [queued]>
+[2025-09-24T09:59:28.527+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_data_cleanse_and_calculate_all.cleanse_data_c3 scheduled__2025-09-24T08:00:00+00:00 [queued]>
+[2025-09-24T09:59:28.528+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-09-24T09:59:28.543+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): cleanse_data_c3> on 2025-09-24 08:00:00+00:00
+[2025-09-24T09:59:28.568+0000] {standard_task_runner.py:60} INFO - Started process 925 to run task
+[2025-09-24T09:59:28.576+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'dag_data_cleanse_and_calculate_all', 'cleanse_data_c3', 'scheduled__2025-09-24T08:00:00+00:00', '--job-id', '277', '--raw', '--subdir', 'DAGS_FOLDER/cleansing_data_flow.py', '--cfg-path', '/tmp/tmpk2570fm4']
+[2025-09-24T09:59:28.588+0000] {standard_task_runner.py:88} INFO - Job 277: Subtask cleanse_data_c3
+[2025-09-24T09:59:28.670+0000] {task_command.py:423} INFO - Running <TaskInstance: dag_data_cleanse_and_calculate_all.cleanse_data_c3 scheduled__2025-09-24T08:00:00+00:00 [running]> on host 5d539c157d54
+[2025-09-24T09:59:28.742+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_data_cleanse_and_calculate_all' AIRFLOW_CTX_TASK_ID='cleanse_data_c3' AIRFLOW_CTX_EXECUTION_DATE='2025-09-24T08:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-24T08:00:00+00:00'
+[2025-09-24T09:59:28.954+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-09-24T09:59:28.962+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=dag_data_cleanse_and_calculate_all, task_id=cleanse_data_c3, execution_date=20250924T080000, start_date=20250924T095928, end_date=20250924T095928
+[2025-09-24T09:59:29.001+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-09-24T09:59:29.016+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,39 @@
+[2025-09-24T09:09:31.789+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_data_cleanse_and_calculate_all.cleanse_data_h10 scheduled__2025-09-24T08:00:00+00:00 [queued]>
+[2025-09-24T09:09:31.816+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_data_cleanse_and_calculate_all.cleanse_data_h10 scheduled__2025-09-24T08:00:00+00:00 [queued]>
+[2025-09-24T09:09:31.818+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-09-24T09:09:31.853+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): cleanse_data_h10> on 2025-09-24 08:00:00+00:00
+[2025-09-24T09:09:31.865+0000] {standard_task_runner.py:60} INFO - Started process 1600 to run task
+[2025-09-24T09:09:31.874+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'dag_data_cleanse_and_calculate_all', 'cleanse_data_h10', 'scheduled__2025-09-24T08:00:00+00:00', '--job-id', '223', '--raw', '--subdir', 'DAGS_FOLDER/cleansing_data_flow.py', '--cfg-path', '/tmp/tmpv78e8p_7']
+[2025-09-24T09:09:31.886+0000] {standard_task_runner.py:88} INFO - Job 223: Subtask cleanse_data_h10
+[2025-09-24T09:09:32.027+0000] {task_command.py:423} INFO - Running <TaskInstance: dag_data_cleanse_and_calculate_all.cleanse_data_h10 scheduled__2025-09-24T08:00:00+00:00 [running]> on host feaba2204362
+[2025-09-24T09:09:32.253+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_data_cleanse_and_calculate_all' AIRFLOW_CTX_TASK_ID='cleanse_data_h10' AIRFLOW_CTX_EXECUTION_DATE='2025-09-24T08:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-24T08:00:00+00:00'
+[2025-09-24T09:09:32.376+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/cleansing_data_flow.py", line 1612, in cleanse_data
+    cursor.execute(insert_query, (
+psycopg2.errors.StringDataRightTruncation: value too long for type character(1)
+
+[2025-09-24T09:09:32.401+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=dag_data_cleanse_and_calculate_all, task_id=cleanse_data_h10, execution_date=20250924T080000, start_date=20250924T090931, end_date=20250924T090932
+[2025-09-24T09:09:32.431+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 223 for task cleanse_data_h10 (value too long for type character(1)
+; 1600)
+[2025-09-24T09:09:32.471+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-09-24T09:09:32.518+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-09-24T09:59:31.007+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_data_cleanse_and_calculate_all.cleanse_data_h10 scheduled__2025-09-24T08:00:00+00:00 [queued]>
+[2025-09-24T09:59:31.020+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_data_cleanse_and_calculate_all.cleanse_data_h10 scheduled__2025-09-24T08:00:00+00:00 [queued]>
+[2025-09-24T09:59:31.021+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-09-24T09:59:31.036+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): cleanse_data_h10> on 2025-09-24 08:00:00+00:00
+[2025-09-24T09:59:31.056+0000] {standard_task_runner.py:60} INFO - Started process 964 to run task
+[2025-09-24T09:59:31.061+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'dag_data_cleanse_and_calculate_all', 'cleanse_data_h10', 'scheduled__2025-09-24T08:00:00+00:00', '--job-id', '284', '--raw', '--subdir', 'DAGS_FOLDER/cleansing_data_flow.py', '--cfg-path', '/tmp/tmp6f8denvz']
+[2025-09-24T09:59:31.063+0000] {standard_task_runner.py:88} INFO - Job 284: Subtask cleanse_data_h10
+[2025-09-24T09:59:31.167+0000] {task_command.py:423} INFO - Running <TaskInstance: dag_data_cleanse_and_calculate_all.cleanse_data_h10 scheduled__2025-09-24T08:00:00+00:00 [running]> on host 5d539c157d54
+[2025-09-24T09:59:31.277+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_data_cleanse_and_calculate_all' AIRFLOW_CTX_TASK_ID='cleanse_data_h10' AIRFLOW_CTX_EXECUTION_DATE='2025-09-24T08:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-24T08:00:00+00:00'
+[2025-09-24T09:59:31.444+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-09-24T09:59:31.451+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=dag_data_cleanse_and_calculate_all, task_id=cleanse_data_h10, execution_date=20250924T080000, start_date=20250924T095931, end_date=20250924T095931
+[2025-09-24T09:59:31.484+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-09-24T09:59:31.506+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check
